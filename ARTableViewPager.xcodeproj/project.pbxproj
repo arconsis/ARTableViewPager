@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7E0D561150FC32D00DFC6C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0D560150FC32D00DFC6C8 /* UIKit.framework */; };
+		D7E0D563150FC32D00DFC6C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0D562150FC32D00DFC6C8 /* Foundation.framework */; };
+		D7E0D565150FC32D00DFC6C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0D564150FC32D00DFC6C8 /* CoreGraphics.framework */; };
+		D7E0D56B150FC32D00DFC6C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7E0D569150FC32D00DFC6C8 /* InfoPlist.strings */; };
+		D7E0D56D150FC32D00DFC6C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E0D56C150FC32D00DFC6C8 /* main.m */; };
+		D7E0D571150FC32D00DFC6C8 /* ARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E0D570150FC32D00DFC6C8 /* ARAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D7E0D55C150FC32D00DFC6C8 /* ARTableViewPager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTableViewPager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7E0D560150FC32D00DFC6C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D7E0D562150FC32D00DFC6C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D7E0D564150FC32D00DFC6C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D7E0D568150FC32D00DFC6C8 /* ARTableViewPager-Info.plist */ = {isa = PBXFileReference; path = "ARTableViewPager-Info.plist"; sourceTree = "<group>"; };
+		D7E0D56A150FC32D00DFC6C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D7E0D56C150FC32D00DFC6C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D7E0D56E150FC32D00DFC6C8 /* ARTableViewPager-Prefix.pch */ = {isa = PBXFileReference; path = "ARTableViewPager-Prefix.pch"; sourceTree = "<group>"; };
+		D7E0D56F150FC32D00DFC6C8 /* ARAppDelegate.h */ = {isa = PBXFileReference; path = ARAppDelegate.h; sourceTree = "<group>"; };
+		D7E0D570150FC32D00DFC6C8 /* ARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARAppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7E0D559150FC32D00DFC6C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7E0D561150FC32D00DFC6C8 /* UIKit.framework in Frameworks */,
+				D7E0D563150FC32D00DFC6C8 /* Foundation.framework in Frameworks */,
+				D7E0D565150FC32D00DFC6C8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7E0D551150FC32D00DFC6C8 = {
+			isa = PBXGroup;
+			children = (
+				D7E0D566150FC32D00DFC6C8 /* ARTableViewPager */,
+				D7E0D55F150FC32D00DFC6C8 /* Frameworks */,
+				D7E0D55D150FC32D00DFC6C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7E0D55D150FC32D00DFC6C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7E0D55C150FC32D00DFC6C8 /* ARTableViewPager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7E0D55F150FC32D00DFC6C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7E0D560150FC32D00DFC6C8 /* UIKit.framework */,
+				D7E0D562150FC32D00DFC6C8 /* Foundation.framework */,
+				D7E0D564150FC32D00DFC6C8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7E0D566150FC32D00DFC6C8 /* ARTableViewPager */ = {
+			isa = PBXGroup;
+			children = (
+				D7E0D56F150FC32D00DFC6C8 /* ARAppDelegate.h */,
+				D7E0D570150FC32D00DFC6C8 /* ARAppDelegate.m */,
+				D7E0D567150FC32D00DFC6C8 /* Supporting Files */,
+			);
+			path = ARTableViewPager;
+			sourceTree = "<group>";
+		};
+		D7E0D567150FC32D00DFC6C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7E0D568150FC32D00DFC6C8 /* ARTableViewPager-Info.plist */,
+				D7E0D569150FC32D00DFC6C8 /* InfoPlist.strings */,
+				D7E0D56C150FC32D00DFC6C8 /* main.m */,
+				D7E0D56E150FC32D00DFC6C8 /* ARTableViewPager-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7E0D55B150FC32D00DFC6C8 /* ARTableViewPager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7E0D574150FC32D00DFC6C8 /* Build configuration list for PBXNativeTarget "ARTableViewPager" */;
+			buildPhases = (
+				D7E0D558150FC32D00DFC6C8 /* Sources */,
+				D7E0D559150FC32D00DFC6C8 /* Frameworks */,
+				D7E0D55A150FC32D00DFC6C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARTableViewPager;
+			productName = ARTableViewPager;
+			productReference = D7E0D55C150FC32D00DFC6C8 /* ARTableViewPager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7E0D553150FC32D00DFC6C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AR;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = D7E0D556150FC32D00DFC6C8 /* Build configuration list for PBXProject "ARTableViewPager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D7E0D551150FC32D00DFC6C8;
+			productRefGroup = D7E0D55D150FC32D00DFC6C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7E0D55B150FC32D00DFC6C8 /* ARTableViewPager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7E0D55A150FC32D00DFC6C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7E0D56B150FC32D00DFC6C8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7E0D558150FC32D00DFC6C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7E0D56D150FC32D00DFC6C8 /* main.m in Sources */,
+				D7E0D571150FC32D00DFC6C8 /* ARAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D7E0D569150FC32D00DFC6C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7E0D56A150FC32D00DFC6C8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7E0D572150FC32D00DFC6C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D7E0D573150FC32D00DFC6C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7E0D575150FC32D00DFC6C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ARTableViewPager/ARTableViewPager-Prefix.pch";
+				INFOPLIST_FILE = "ARTableViewPager/ARTableViewPager-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D7E0D576150FC32D00DFC6C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ARTableViewPager/ARTableViewPager-Prefix.pch";
+				INFOPLIST_FILE = "ARTableViewPager/ARTableViewPager-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7E0D556150FC32D00DFC6C8 /* Build configuration list for PBXProject "ARTableViewPager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7E0D572150FC32D00DFC6C8 /* Debug */,
+				D7E0D573150FC32D00DFC6C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7E0D574150FC32D00DFC6C8 /* Build configuration list for PBXNativeTarget "ARTableViewPager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7E0D575150FC32D00DFC6C8 /* Debug */,
+				D7E0D576150FC32D00DFC6C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7E0D553150FC32D00DFC6C8 /* Project object */;
+}
