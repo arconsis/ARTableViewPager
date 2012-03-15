@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D77AE4BC1511E935007DB396 /* ARPagingTablePageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4B61511E935007DB396 /* ARPagingTablePageControl.m */; };
+		D77AE4BD1511E935007DB396 /* ARPagingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4B71511E935007DB396 /* ARPagingTableView.m */; };
+		D77AE4BE1511E935007DB396 /* ARPagingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4B81511E935007DB396 /* ARPagingTableViewController.m */; };
+		D77AE4C01511EA5A007DB396 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4BF1511EA5A007DB396 /* main.m */; };
 		D7E0D561150FC32D00DFC6C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0D560150FC32D00DFC6C8 /* UIKit.framework */; };
 		D7E0D563150FC32D00DFC6C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0D562150FC32D00DFC6C8 /* Foundation.framework */; };
 		D7E0D565150FC32D00DFC6C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0D564150FC32D00DFC6C8 /* CoreGraphics.framework */; };
 		D7E0D56B150FC32D00DFC6C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7E0D569150FC32D00DFC6C8 /* InfoPlist.strings */; };
-		D7E0D56D150FC32D00DFC6C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E0D56C150FC32D00DFC6C8 /* main.m */; };
-		D7E0D571150FC32D00DFC6C8 /* ARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E0D570150FC32D00DFC6C8 /* ARAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D77AE4B61511E935007DB396 /* ARPagingTablePageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARPagingTablePageControl.m; path = Classes/ARPagingTablePageControl.m; sourceTree = SOURCE_ROOT; };
+		D77AE4B71511E935007DB396 /* ARPagingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARPagingTableView.m; path = Classes/ARPagingTableView.m; sourceTree = SOURCE_ROOT; };
+		D77AE4B81511E935007DB396 /* ARPagingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARPagingTableViewController.m; path = Classes/ARPagingTableViewController.m; sourceTree = SOURCE_ROOT; };
+		D77AE4B91511E935007DB396 /* ARPagingTablePageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARPagingTablePageControl.h; path = Classes/ARPagingTablePageControl.h; sourceTree = SOURCE_ROOT; };
+		D77AE4BA1511E935007DB396 /* ARPagingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARPagingTableView.h; path = Classes/ARPagingTableView.h; sourceTree = SOURCE_ROOT; };
+		D77AE4BB1511E935007DB396 /* ARPagingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARPagingTableViewController.h; path = Classes/ARPagingTableViewController.h; sourceTree = SOURCE_ROOT; };
+		D77AE4BF1511EA5A007DB396 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7E0D55C150FC32D00DFC6C8 /* ARTableViewPager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTableViewPager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E0D560150FC32D00DFC6C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D7E0D562150FC32D00DFC6C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D7E0D564150FC32D00DFC6C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D7E0D568150FC32D00DFC6C8 /* ARTableViewPager-Info.plist */ = {isa = PBXFileReference; path = "ARTableViewPager-Info.plist"; sourceTree = "<group>"; };
+		D7E0D568150FC32D00DFC6C8 /* ARTableViewPager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ARTableViewPager-Info.plist"; sourceTree = "<group>"; };
 		D7E0D56A150FC32D00DFC6C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D7E0D56C150FC32D00DFC6C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D7E0D56E150FC32D00DFC6C8 /* ARTableViewPager-Prefix.pch */ = {isa = PBXFileReference; path = "ARTableViewPager-Prefix.pch"; sourceTree = "<group>"; };
-		D7E0D56F150FC32D00DFC6C8 /* ARAppDelegate.h */ = {isa = PBXFileReference; path = ARAppDelegate.h; sourceTree = "<group>"; };
-		D7E0D570150FC32D00DFC6C8 /* ARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARAppDelegate.m; sourceTree = "<group>"; };
+		D7E0D56E150FC32D00DFC6C8 /* ARTableViewPager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARTableViewPager-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				D7E0D566150FC32D00DFC6C8 /* ARTableViewPager */,
+				D7E0D567150FC32D00DFC6C8 /* Supporting Files */,
 				D7E0D55F150FC32D00DFC6C8 /* Frameworks */,
 				D7E0D55D150FC32D00DFC6C8 /* Products */,
 			);
@@ -72,9 +79,12 @@
 		D7E0D566150FC32D00DFC6C8 /* ARTableViewPager */ = {
 			isa = PBXGroup;
 			children = (
-				D7E0D56F150FC32D00DFC6C8 /* ARAppDelegate.h */,
-				D7E0D570150FC32D00DFC6C8 /* ARAppDelegate.m */,
-				D7E0D567150FC32D00DFC6C8 /* Supporting Files */,
+				D77AE4B91511E935007DB396 /* ARPagingTablePageControl.h */,
+				D77AE4B61511E935007DB396 /* ARPagingTablePageControl.m */,
+				D77AE4BA1511E935007DB396 /* ARPagingTableView.h */,
+				D77AE4B71511E935007DB396 /* ARPagingTableView.m */,
+				D77AE4BB1511E935007DB396 /* ARPagingTableViewController.h */,
+				D77AE4B81511E935007DB396 /* ARPagingTableViewController.m */,
 			);
 			path = ARTableViewPager;
 			sourceTree = "<group>";
@@ -82,12 +92,13 @@
 		D7E0D567150FC32D00DFC6C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D77AE4BF1511EA5A007DB396 /* main.m */,
 				D7E0D568150FC32D00DFC6C8 /* ARTableViewPager-Info.plist */,
 				D7E0D569150FC32D00DFC6C8 /* InfoPlist.strings */,
-				D7E0D56C150FC32D00DFC6C8 /* main.m */,
 				D7E0D56E150FC32D00DFC6C8 /* ARTableViewPager-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = ARTableViewPager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7E0D56D150FC32D00DFC6C8 /* main.m in Sources */,
-				D7E0D571150FC32D00DFC6C8 /* ARAppDelegate.m in Sources */,
+				D77AE4BC1511E935007DB396 /* ARPagingTablePageControl.m in Sources */,
+				D77AE4BD1511E935007DB396 /* ARPagingTableView.m in Sources */,
+				D77AE4BE1511E935007DB396 /* ARPagingTableViewController.m in Sources */,
+				D77AE4C01511EA5A007DB396 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +270,7 @@
 				D7E0D576150FC32D00DFC6C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

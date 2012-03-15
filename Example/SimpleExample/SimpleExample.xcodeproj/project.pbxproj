@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D77AE4E11511F0E7007DB396 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77AE4E01511F0E7007DB396 /* UIKit.framework */; };
+		D77AE4E31511F0E7007DB396 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77AE4E21511F0E7007DB396 /* Foundation.framework */; };
+		D77AE4E51511F0E7007DB396 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77AE4E41511F0E7007DB396 /* CoreGraphics.framework */; };
+		D77AE4EB1511F0E7007DB396 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D77AE4E91511F0E7007DB396 /* InfoPlist.strings */; };
+		D77AE4ED1511F0E7007DB396 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4EC1511F0E7007DB396 /* main.m */; };
+		D77AE4F11511F0E7007DB396 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4F01511F0E7007DB396 /* AppDelegate.m */; };
+		D77AE5031511F140007DB396 /* ARPagingTablePageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4FD1511F140007DB396 /* ARPagingTablePageControl.m */; };
+		D77AE5041511F140007DB396 /* ARPagingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4FE1511F140007DB396 /* ARPagingTableView.m */; };
+		D77AE5051511F140007DB396 /* ARPagingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4FF1511F140007DB396 /* ARPagingTableViewController.m */; };
+		D77AE5171511F319007DB396 /* SimplePagingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE5151511F319007DB396 /* SimplePagingTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D77AE4DC1511F0E7007DB396 /* SimpleExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D77AE4E01511F0E7007DB396 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D77AE4E21511F0E7007DB396 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D77AE4E41511F0E7007DB396 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D77AE4E81511F0E7007DB396 /* SimpleExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleExample-Info.plist"; sourceTree = "<group>"; };
+		D77AE4EA1511F0E7007DB396 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D77AE4EC1511F0E7007DB396 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D77AE4EE1511F0E7007DB396 /* SimpleExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleExample-Prefix.pch"; sourceTree = "<group>"; };
+		D77AE4EF1511F0E7007DB396 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D77AE4F01511F0E7007DB396 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D77AE4FD1511F140007DB396 /* ARPagingTablePageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARPagingTablePageControl.m; path = ../../Classes/ARPagingTablePageControl.m; sourceTree = "<group>"; };
+		D77AE4FE1511F140007DB396 /* ARPagingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARPagingTableView.m; path = ../../Classes/ARPagingTableView.m; sourceTree = "<group>"; };
+		D77AE4FF1511F140007DB396 /* ARPagingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARPagingTableViewController.m; path = ../../Classes/ARPagingTableViewController.m; sourceTree = "<group>"; };
+		D77AE5001511F140007DB396 /* ARPagingTablePageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARPagingTablePageControl.h; path = ../../Classes/ARPagingTablePageControl.h; sourceTree = "<group>"; };
+		D77AE5011511F140007DB396 /* ARPagingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARPagingTableView.h; path = ../../Classes/ARPagingTableView.h; sourceTree = "<group>"; };
+		D77AE5021511F140007DB396 /* ARPagingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARPagingTableViewController.h; path = ../../Classes/ARPagingTableViewController.h; sourceTree = "<group>"; };
+		D77AE5141511F319007DB396 /* SimplePagingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePagingTableViewController.h; sourceTree = "<group>"; };
+		D77AE5151511F319007DB396 /* SimplePagingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePagingTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D77AE4D91511F0E7007DB396 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D77AE4E11511F0E7007DB396 /* UIKit.framework in Frameworks */,
+				D77AE4E31511F0E7007DB396 /* Foundation.framework in Frameworks */,
+				D77AE4E51511F0E7007DB396 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D77AE4D11511F0E7007DB396 = {
+			isa = PBXGroup;
+			children = (
+				D77AE4FC1511F128007DB396 /* ARTableViewPager */,
+				D77AE4E61511F0E7007DB396 /* SimpleExample */,
+				D77AE4DF1511F0E7007DB396 /* Frameworks */,
+				D77AE4DD1511F0E7007DB396 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D77AE4DD1511F0E7007DB396 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D77AE4DC1511F0E7007DB396 /* SimpleExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D77AE4DF1511F0E7007DB396 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D77AE4E01511F0E7007DB396 /* UIKit.framework */,
+				D77AE4E21511F0E7007DB396 /* Foundation.framework */,
+				D77AE4E41511F0E7007DB396 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D77AE4E61511F0E7007DB396 /* SimpleExample */ = {
+			isa = PBXGroup;
+			children = (
+				D77AE4EF1511F0E7007DB396 /* AppDelegate.h */,
+				D77AE4F01511F0E7007DB396 /* AppDelegate.m */,
+				D77AE5141511F319007DB396 /* SimplePagingTableViewController.h */,
+				D77AE5151511F319007DB396 /* SimplePagingTableViewController.m */,
+				D77AE4E71511F0E7007DB396 /* Supporting Files */,
+			);
+			path = SimpleExample;
+			sourceTree = "<group>";
+		};
+		D77AE4E71511F0E7007DB396 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D77AE4E81511F0E7007DB396 /* SimpleExample-Info.plist */,
+				D77AE4E91511F0E7007DB396 /* InfoPlist.strings */,
+				D77AE4EC1511F0E7007DB396 /* main.m */,
+				D77AE4EE1511F0E7007DB396 /* SimpleExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D77AE4FC1511F128007DB396 /* ARTableViewPager */ = {
+			isa = PBXGroup;
+			children = (
+				D77AE4FD1511F140007DB396 /* ARPagingTablePageControl.m */,
+				D77AE4FE1511F140007DB396 /* ARPagingTableView.m */,
+				D77AE4FF1511F140007DB396 /* ARPagingTableViewController.m */,
+				D77AE5001511F140007DB396 /* ARPagingTablePageControl.h */,
+				D77AE5011511F140007DB396 /* ARPagingTableView.h */,
+				D77AE5021511F140007DB396 /* ARPagingTableViewController.h */,
+			);
+			name = ARTableViewPager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D77AE4DB1511F0E7007DB396 /* SimpleExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D77AE4F41511F0E7007DB396 /* Build configuration list for PBXNativeTarget "SimpleExample" */;
+			buildPhases = (
+				D77AE4D81511F0E7007DB396 /* Sources */,
+				D77AE4D91511F0E7007DB396 /* Frameworks */,
+				D77AE4DA1511F0E7007DB396 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleExample;
+			productName = SimpleExample;
+			productReference = D77AE4DC1511F0E7007DB396 /* SimpleExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D77AE4D31511F0E7007DB396 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = D77AE4D61511F0E7007DB396 /* Build configuration list for PBXProject "SimpleExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D77AE4D11511F0E7007DB396;
+			productRefGroup = D77AE4DD1511F0E7007DB396 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D77AE4DB1511F0E7007DB396 /* SimpleExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D77AE4DA1511F0E7007DB396 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D77AE4EB1511F0E7007DB396 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D77AE4D81511F0E7007DB396 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D77AE4ED1511F0E7007DB396 /* main.m in Sources */,
+				D77AE4F11511F0E7007DB396 /* AppDelegate.m in Sources */,
+				D77AE5031511F140007DB396 /* ARPagingTablePageControl.m in Sources */,
+				D77AE5041511F140007DB396 /* ARPagingTableView.m in Sources */,
+				D77AE5051511F140007DB396 /* ARPagingTableViewController.m in Sources */,
+				D77AE5171511F319007DB396 /* SimplePagingTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D77AE4E91511F0E7007DB396 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D77AE4EA1511F0E7007DB396 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D77AE4F21511F0E7007DB396 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D77AE4F31511F0E7007DB396 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D77AE4F51511F0E7007DB396 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleExample/SimpleExample-Prefix.pch";
+				INFOPLIST_FILE = "SimpleExample/SimpleExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D77AE4F61511F0E7007DB396 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleExample/SimpleExample-Prefix.pch";
+				INFOPLIST_FILE = "SimpleExample/SimpleExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D77AE4D61511F0E7007DB396 /* Build configuration list for PBXProject "SimpleExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D77AE4F21511F0E7007DB396 /* Debug */,
+				D77AE4F31511F0E7007DB396 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D77AE4F41511F0E7007DB396 /* Build configuration list for PBXNativeTarget "SimpleExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D77AE4F51511F0E7007DB396 /* Debug */,
+				D77AE4F61511F0E7007DB396 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D77AE4D31511F0E7007DB396 /* Project object */;
+}
