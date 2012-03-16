@@ -22,14 +22,15 @@
 @interface ARTableViewPagerViewController ()
 
 @property (nonatomic, strong) NSMutableArray *internalTableViews;
-@property (strong, nonatomic) ARTableViewPagerView *pagingTableView;
+@property (strong, nonatomic) ARTableViewPagerView *tableViewPagerView;
+@property (nonatomic) NSUInteger numberOfPages;
 
 @end
 
 
 @implementation ARTableViewPagerViewController
 
-@synthesize pagingTableView = _pagingTableView;
+@synthesize tableViewPagerView = _tableViewPagerView;
 @synthesize numberOfPages = _numberOfPages;
 @synthesize internalTableViews = _internalTableViews;
 @synthesize frame = _frame;
@@ -92,7 +93,7 @@
     [super viewDidLoad];
 
     if ([self.view isKindOfClass:[ARTableViewPagerView class]]) {
-        self.pagingTableView = (ARTableViewPagerView *)self.view;
+        self.tableViewPagerView = (ARTableViewPagerView *)self.view;
     } else {
         NSLog(@"Configuration Warning: View for PagingTableViewController must be of type PagingTableView! Setting default view.");
         self.view = [[ARTableViewPagerView alloc] initWithFrame:self.view.bounds];
@@ -100,24 +101,24 @@
     }
     
     // Need to init the pagingTableView first with size and labels
-    self.pagingTableView.titleViews = [self.titleViews mutableCopy];
-    self.pagingTableView.titleDefaultLabelStrings = [self.titleStrings mutableCopy];
-    self.pagingTableView.rightArrowView = self.rightArrowView;
-    self.pagingTableView.leftArrowView = self.leftArrowView;
-    self.pagingTableView.pageControlBackgroundColor = self.pageControlBackgroundColor;
-    self.pagingTableView.fixedBackgroundColor = self.fixedBackgroundColor;
-    self.pagingTableView.scrollingBackgroundColor = self.scrollingBackgroundColor;
-    self.pagingTableView.hidePageControl = self.hidePageControl ? self.hidePageControl : NO;
-    self.pagingTableView.pageControlHeight = self.pageControlHeight;
+    self.tableViewPagerView.titleViews = [self.titleViews mutableCopy];
+    self.tableViewPagerView.titleDefaultLabelStrings = [self.titleStrings mutableCopy];
+    self.tableViewPagerView.rightArrowView = self.rightArrowView;
+    self.tableViewPagerView.leftArrowView = self.leftArrowView;
+    self.tableViewPagerView.pageControlBackgroundColor = self.pageControlBackgroundColor;
+    self.tableViewPagerView.fixedBackgroundColor = self.fixedBackgroundColor;
+    self.tableViewPagerView.scrollingBackgroundColor = self.scrollingBackgroundColor;
+    self.tableViewPagerView.hidePageControl = self.hidePageControl ? self.hidePageControl : NO;
+    self.tableViewPagerView.pageControlHeight = self.pageControlHeight;
     
-    self.pagingTableView = [self.pagingTableView initWithFrame:self.frame];
-    self.pagingTableView.delegate = self;
+    self.tableViewPagerView = [self.tableViewPagerView initWithFrame:self.frame];
+    self.tableViewPagerView.delegate = self;
 
-    [self.pagingTableView initializeLayout];
+    [self.tableViewPagerView initializeLayout];
     
     // Now create the subview tableviews in the scrollView
-    UIScrollView *scrollView = self.pagingTableView.scrollView;
-    UIPageControl *pageControl = self.pagingTableView.pageControl;
+    UIScrollView *scrollView = self.tableViewPagerView.scrollView;
+    UIPageControl *pageControl = self.tableViewPagerView.pageControl;
 	
 	for (int i = 0; i < self.numberOfPages; i++) {
 		CGRect frame;
@@ -147,14 +148,14 @@
 }
 
 - (void)viewDidUnload {
-    [self setPagingTableView:nil];
+    [self setTableViewPagerView:nil];
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 }
 
 
 #pragma mark - Public methods to use in subclass
-- (NSArray *)tableviews {
+- (NSArray *)tableViews {
     return [NSArray arrayWithArray:self.internalTableViews];
 }
 
@@ -163,13 +164,13 @@
 }
 
 - (NSUInteger)currentPageIndex {
-    return self.pagingTableView.pageControl.currentPage;
+    return self.tableViewPagerView.pageControl.currentPage;
 }
 
 - (void)moveToPageAtIndex:(NSUInteger)pageIndex animated:(BOOL)animated {
     if (pageIndex < self.numberOfPages) {
-        self.pagingTableView.pageControl.currentPage = pageIndex;
-        [self.pagingTableView pageControlChangePage:animated];
+        self.tableViewPagerView.pageControl.currentPage = pageIndex;
+        [self.tableViewPagerView pageControlChangePage:animated];
     }
 }
 

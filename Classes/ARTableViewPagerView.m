@@ -113,9 +113,6 @@
     return self;
 }
 
-
-// This gets called automatically whenever this view is inserted into 
-// another view. Just making sure it gets the right 'frame' value.
 - (void)layoutSubviews {    
     self.frame = self.viewRect;
 }
@@ -151,11 +148,11 @@
 		CGFloat pageWidth = self.scrollView.frame.size.width;
 		int pageIndex = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
         
-        // Set boundaries if values out of range
+        // Set boundaries if values are out of range
         pageIndex = pageIndex < 0 ? pageIndex = 0 : pageIndex;
         pageIndex = pageIndex > self.pageControl.numberOfPages - 1 ? self.pageControl.numberOfPages - 1 : pageIndex;
         
-        // CALLBACK TO DELEGATE!
+        // callback to delegate
         if (self.pageControl.currentPage != pageIndex) {
             UITableView *tableview = [self.scrollView.subviews objectAtIndex:pageIndex];
             [self pageChangedToTableView:tableview withPageIndex:pageIndex];
@@ -172,7 +169,6 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
 	self.pageControlBeingUsed = NO;
     self.scrollView.scrollEnabled = YES;
-    //[self setNeedsDisplay];
  }
 
 - (void) pageControlChangePage{
@@ -186,14 +182,10 @@
 	frame.origin.y = 0;
 	frame.size = self.scrollView.frame.size;
 	[self.scrollView scrollRectToVisible:frame animated:animated];
-	
-	// Keep track of when scrolls happen in response to the page control
-	// value changing. If we don't do this, a noticeable "flashing" occurs
-	// as the the scroll delegate will temporarily switch back the page
-	// number.
+
 	self.pageControlBeingUsed = YES;
     
-    // CALLBACK TO DELEGATE!
+    // callback to delegate
     UITableView *tableview = [self.scrollView.subviews objectAtIndex:self.pageControl.currentPage];
     [self pageChangedToTableView:tableview withPageIndex:self.pageControl.currentPage];
 }
@@ -220,7 +212,6 @@
     }
     
     if (self.titleViews && pageIndex < self.pageControl.numberOfPages - 1) {
-
         UIView *r = self.rightArrowView ? self.rightArrowView : [self defaultArrowView:@"> "];        
         [self.pageControl.rightView addSubview:r];
         r.frame = self.pageControl.rightView.bounds;
@@ -232,7 +223,6 @@
 }
 
 -(void)pageChangedToTableView:(UITableView *)tableview withPageIndex:(NSUInteger)pageIndex {
-    
     [self setupTitleViewsForPageIndex:pageIndex];
     [self.delegate pageChangedToTableView:tableview withPageIndex:pageIndex];
 }

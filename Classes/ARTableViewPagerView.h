@@ -34,7 +34,7 @@
 @property (nonatomic, strong, readonly) ARTableViewPagerPageControl *pageControl;
 @property (nonatomic, strong, readonly) UIScrollView *scrollView;
 
-// specify the content of the pageControle
+// specify the content of the pageControl
 @property (nonatomic, strong) NSMutableArray *titleDefaultLabelStrings;
 @property (nonatomic, strong) NSMutableArray *titleViews; //overrides titleDetaultLabelStrings
 @property (nonatomic, strong) UIView *leftArrowView;

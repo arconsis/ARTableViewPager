@@ -20,41 +20,8 @@
 #import <UIKit/UIKit.h>
 #import "ARTableViewPagerView.h"
 
-@interface ARTableViewPagerViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ARTableViewPagerViewChanged> 
 
-@property (strong, nonatomic, readonly) ARTableViewPagerView *pagingTableView;
-@property (nonatomic) NSUInteger numberOfPages;
-
-// use this property to adjust the frame of the tableViewPager if using it as a subview like in a NavigationController
-@property (nonatomic) CGRect frame;
-
-// controle the page control header
-@property (nonatomic, strong) UIColor *pageControlBackgroundColor;
-@property (nonatomic) BOOL hidePageControl;
-@property (nonatomic) float pageControlHeight;
-
-// set the background color auf the paging table
-@property (nonatomic, strong) UIColor *scrollingBackgroundColor;
-@property (nonatomic, strong) UIColor *fixedBackgroundColor; //overrides the scrollingBackgroundColor
-
-// set Views used in the page control
-@property (nonatomic, strong) NSArray *titleStrings; // using default views for the titles
-@property (nonatomic, strong) NSArray *titleViews; // overrides the stings from titleStrings
-@property (nonatomic, strong) UIView *leftArrowView;
-@property (nonatomic, strong) UIView *rightArrowView;
-
-- (id)initWithNumberOfPages:(NSUInteger)numberOfPages;
-- (id)initWithTitleViews:(NSArray *)titleViews;
-- (id)initWithTitleStrings:(NSArray *)titleStrings;
-
-- (NSArray *)tableviews;
-- (UITableView *)tableViewForPageIndex:(NSUInteger)pageIndex;
-- (NSUInteger) currentPageIndex;
-- (void)moveToPageAtIndex:(NSUInteger)pageIndex animated:(BOOL)animated;
-
-@end
-
-@protocol ARPagingTableViewDataSource <NSObject>
+@protocol ARTableViewPagerDataSource <NSObject>
 
 #pragma mark - Paging view data source
 
@@ -95,9 +62,10 @@
 
 - (void)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath;
 
-
+@end
 
 #pragma mark - Paging view delegate
+@protocol ARTableViewPagerDelegate <NSObject>
 
 @optional
 
@@ -157,8 +125,42 @@
 - (BOOL)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView canPerformAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_5_0);
 - (void)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_5_0);
 
+@end
+
+@interface ARTableViewPagerViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ARTableViewPagerViewChanged, ARTableViewPagerDataSource, ARTableViewPagerDelegate> 
+
+@property (strong, nonatomic, readonly) ARTableViewPagerView *tableViewPagerView;
+@property (nonatomic, readonly) NSUInteger numberOfPages;
+
+// use this property to adjust the frame of the tableViewPager if using it as a subview like in a NavigationController
+@property (nonatomic) CGRect frame;
+
+// controle the page control header
+@property (nonatomic, strong) UIColor *pageControlBackgroundColor;
+@property (nonatomic) BOOL hidePageControl;
+@property (nonatomic) float pageControlHeight;
+
+// set the background color auf the paging table
+@property (nonatomic, strong) UIColor *fixedBackgroundColor; 
+@property (nonatomic, strong) UIColor *scrollingBackgroundColor; //overrides the fixedBackgroundColor
+
+// set Views used in the page control
+@property (nonatomic, strong) NSArray *titleStrings; // using default views for the titles
+@property (nonatomic, strong) NSArray *titleViews; // overrides the stings from titleStrings
+@property (nonatomic, strong) UIView *leftArrowView;
+@property (nonatomic, strong) UIView *rightArrowView;
+
+- (id)initWithNumberOfPages:(NSUInteger)numberOfPages;
+- (id)initWithTitleViews:(NSArray *)titleViews;
+- (id)initWithTitleStrings:(NSArray *)titleStrings;
+
+- (NSArray *)tableViews;
+- (UITableView *)tableViewForPageIndex:(NSUInteger)pageIndex;
+- (NSUInteger) currentPageIndex;
+- (void)moveToPageAtIndex:(NSUInteger)pageIndex animated:(BOOL)animated;
 
 @end
+
 
 
 

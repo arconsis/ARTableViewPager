@@ -80,7 +80,7 @@
     if (self.showTitles) {
         NSArray *subviews = self.subviews;
         
-        // hides  the three dots
+        // hides the three dots
         for (UIView *v in subviews) {
             if (v.tag < 900 || v.tag >= 1000) {
                 v.hidden = YES;
