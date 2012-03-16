@@ -5,6 +5,8 @@ The ARTableViewPager is an iOS component for horizontal table view scrolling/pag
 
 This component gives you the possibility to manage multiple UITableViews with one ViewController. To change the displayed table view you can either use a swipe gesture or the PageControl in the header. Its very easy to use just like the standard UITableViewController. You simply subclass ARTableViewPagerViewController!
 
+![](https://github.com/arconsis/ARTableViewPager/raw/master/Screenshots/screenshot_1.png) -> ![](https://github.com/arconsis/ARTableViewPager/raw/master/Screenshots/screenshot_2.png) -> ![](https://github.com/arconsis/ARTableViewPager/raw/master/Screenshots/screenshot_3.png)
+
 Please enjoy this framework!
 
 Features:
