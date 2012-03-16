@@ -1,5 +1,5 @@
 /* 
- Copyright (c) 2012 arconsis IT-Solutions GmbH (http://www.arconsis.com)
+ Copyright (c) 2012 arconsis IT-Solutions GmbH (http://www.arconsis.com )
  
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
  associated documentation files (the "Software"), to deal in the Software without restriction, including
@@ -17,44 +17,59 @@
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import "ARPagingTableViewController.h"
+#import "ARTableViewPagerViewController.h"
 
-@interface ARPagingTableViewController ()
+@interface ARTableViewPagerViewController ()
 
 @property (nonatomic, strong) NSMutableArray *internalTableViews;
-@property (strong, nonatomic) ARPagingTableView *pagingTableView;
+@property (strong, nonatomic) ARTableViewPagerView *pagingTableView;
 
 @end
 
 
-@implementation ARPagingTableViewController
+@implementation ARTableViewPagerViewController
 
 @synthesize pagingTableView = _pagingTableView;
 @synthesize numberOfPages = _numberOfPages;
+@synthesize internalTableViews = _internalTableViews;
+@synthesize frame = _frame;
 
 @synthesize titleViews = _titleViews;
 @synthesize leftArrowView = _leftArrowView;
 @synthesize rightArrowView = _rightArrowView;
 @synthesize titleStrings = _titleStrings;
+
 @synthesize pageControlBackgroundColor = _pageControlBackgroundColor;
 @synthesize scrollingBackgroundColor = _scrollingBackgroundColor;
 @synthesize fixedBackgroundColor = _fixedBackgroundColor;
+
 @synthesize hidePageControl = _hidePageControl;
 @synthesize pageControlHeight = _pageControlHeight;
 
-@synthesize internalTableViews = _internalTableViews;
-@synthesize frame = _frame;
+#pragma mark - paging
 
-
--(id)initWithNumberTitleViews:(NSArray *)titleViews {
-
-    self = [self initWithNumberOfPages:[titleViews count]];
-    self.titleViews = titleViews;
+- (id)initWithTitleStrings:(NSArray *)titleStrings {
+    
+    self = [self initWithNumberOfPages:[titleStrings count]];
+    if (self) {
+        self.titleStrings = titleStrings;
+    }
     
     return self;
 }
 
--(id)initWithNumberOfPages:(NSUInteger)numberOfPages {
+- (id)initWithTitleViews:(NSArray *)titleViews {
+
+    self = [self initWithNumberOfPages:[titleViews count]];
+    
+    if (self) {
+        self.titleViews = titleViews;
+    }
+    
+    return self;
+}
+
+- (id)initWithNumberOfPages:(NSUInteger)numberOfPages {
 
     if (self = [super init]) {
         self.numberOfPages = numberOfPages;
@@ -66,33 +81,23 @@
     
 }
 
-//-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-//
-//    
-//    if (self) {
-//    }
-//    return self;
-//}
+#pragma mark - View lifecycle
 
-- (void)loadView
-{
-    ARPagingTableView *pagingTableView = [[ARPagingTableView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+- (void)loadView {
+    ARTableViewPagerView *pagingTableView = [[ARTableViewPagerView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.view = pagingTableView;
 }
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    if ([self.view isKindOfClass:[ARPagingTableView class]]) {
-        self.pagingTableView = (ARPagingTableView *)self.view;
-        //self.pagingTableView.delegate = self;
+    if ([self.view isKindOfClass:[ARTableViewPagerView class]]) {
+        self.pagingTableView = (ARTableViewPagerView *)self.view;
     } else {
         NSLog(@"Configuration Warning: View for PagingTableViewController must be of type PagingTableView! Setting default view.");
-        self.view = [[ARPagingTableView alloc] initWithFrame:self.view.bounds];
+        self.view = [[ARTableViewPagerView alloc] initWithFrame:self.view.bounds];
         
     }
-
     
     // Need to init the pagingTableView first with size and labels
     self.pagingTableView.titleViews = [self.titleViews mutableCopy];
@@ -121,7 +126,6 @@
 		frame.size = scrollView.frame.size;
 		
 		UITableView *subview = [[UITableView alloc] initWithFrame:frame];
-		//subview.backgroundColor = [UIColor colorWithRed:(17*i + 80)/255.0f green:(15*i + 80)/255.0f blue:(23*i + 80)/255.0f alpha:1];
         subview.dataSource = self;
         subview.delegate = self;
         
@@ -130,7 +134,6 @@
 	}
 	
 	scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * self.numberOfPages, scrollView.frame.size.height);
-    
     
     pageControl.currentPage = 0;
 	pageControl.numberOfPages = self.numberOfPages;
@@ -149,13 +152,11 @@
 	// e.g. self.myOutlet = nil;
 }
 
-- (NSArray *)tableviews
-{
-    return [NSArray arrayWithArray:self.internalTableViews];
-}
-
 
 #pragma mark - Public methods to use in subclass
+- (NSArray *)tableviews {
+    return [NSArray arrayWithArray:self.internalTableViews];
+}
 
 - (UITableView *)tableViewForPageIndex:(NSUInteger)pageIndex {
     return [self.internalTableViews objectAtIndex:pageIndex];
@@ -165,8 +166,7 @@
     return self.pagingTableView.pageControl.currentPage;
 }
 
-- (void)moveToPageAtIndex:(NSUInteger)pageIndex animated:(BOOL)animated
-{
+- (void)moveToPageAtIndex:(NSUInteger)pageIndex animated:(BOOL)animated {
     if (pageIndex < self.numberOfPages) {
         self.pagingTableView.pageControl.currentPage = pageIndex;
         [self.pagingTableView pageControlChangePage:animated];
@@ -181,20 +181,17 @@
 
 
 #pragma mark - Paging view data source to override in subclass
-- (NSInteger)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
     return 0;
 }
 
-- (UITableViewCell *)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     return nil;
 }
 
 // optionals 
-- (NSInteger)pageIndex:(NSUInteger)pageIndex numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)pageIndex:(NSUInteger)pageIndex numberOfSectionsInTableView:(UITableView *)tableView{
     // Return the number of sections.
     return 0;
 }
@@ -240,14 +237,13 @@
 // Data manipulation - reorder / moving support
 
 - (void)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+
 }
 
 
 
 #pragma mark - Paging view delegate
 #pragma mark - Paging Table View delegate methods
-
-
 - (void)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
@@ -284,13 +280,16 @@
 - (NSIndexPath *)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     return indexPath;
 }
+
 - (NSIndexPath *)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView willDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     return indexPath;
 }
 
 - (void)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
+
 - (void)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 // Editing
@@ -313,6 +312,7 @@
 - (void)pageIndex:(NSUInteger)pageIndex tableView:(UITableView*)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
+
 - (void)pageIndex:(NSUInteger)pageIndex tableView:(UITableView*)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
@@ -341,27 +341,25 @@
 }
 
 - (void)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+    
 }
 
 
 
 #pragma mark - Table view data source. Delegate all method calls to subclass and include pageIndex.
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSUInteger tableViewIndex = [self.internalTableViews indexOfObject:tableView];
     // Return the number of rows in the section.
     return [self pageIndex:tableViewIndex tableView:tableView numberOfRowsInSection:section];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger tableViewIndex = [self.internalTableViews indexOfObject:tableView];
     return [self pageIndex:tableViewIndex tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSUInteger tableViewIndex = [self.internalTableViews indexOfObject:tableView];
     // Return the number of sections.
     return [self pageIndex:tableViewIndex numberOfSectionsInTableView:tableView];
@@ -420,7 +418,6 @@
     [self pageIndex:tableViewIndex tableView:tableView moveRowAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
 }
 
-
 #pragma mark - Table view data source. Delegate all method calls to subclass and include pageIndex.
 
 //@optional
@@ -440,11 +437,13 @@
     // Return the number of rows in the section.
     return [self pageIndex:tableViewIndex tableView:tableView heightForRowAtIndexPath:indexPath];
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     NSUInteger tableViewIndex = [self.internalTableViews indexOfObject:tableView];
     // Return the number of rows in the section.
     return [self pageIndex:tableViewIndex tableView:tableView heightForHeaderInSection:section];
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     NSUInteger tableViewIndex = [self.internalTableViews indexOfObject:tableView];
     // Return the number of rows in the section.
@@ -458,6 +457,7 @@
     // Return the number of rows in the section.
     return [self pageIndex:tableViewIndex tableView:tableView viewForHeaderInSection:section];
 }
+
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     NSUInteger tableViewIndex = [self.internalTableViews indexOfObject:tableView];
     // Return the number of rows in the section.
@@ -480,14 +480,15 @@
     // Return the number of rows in the section.
     return [self pageIndex:tableViewIndex tableView:tableView willSelectRowAtIndexPath:indexPath];
 }
+
 - (NSIndexPath *)tableView:(UITableView *)tableView willDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger tableViewIndex = [self.internalTableViews indexOfObject:tableView];
     // Return the number of rows in the section.
     return [self pageIndex:tableViewIndex tableView:tableView willDeselectRowAtIndexPath:indexPath];
 }
+
 // Called after the user changes the selection.
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger tableViewIndex = [self.internalTableViews indexOfObject:tableView];
     [self pageIndex:tableViewIndex tableView:tableView didSelectRowAtIndexPath:indexPath];
 }

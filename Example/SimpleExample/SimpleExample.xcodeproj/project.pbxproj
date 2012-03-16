@@ -13,10 +13,10 @@
 		D77AE4EB1511F0E7007DB396 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D77AE4E91511F0E7007DB396 /* InfoPlist.strings */; };
 		D77AE4ED1511F0E7007DB396 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4EC1511F0E7007DB396 /* main.m */; };
 		D77AE4F11511F0E7007DB396 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4F01511F0E7007DB396 /* AppDelegate.m */; };
-		D77AE5031511F140007DB396 /* ARPagingTablePageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4FD1511F140007DB396 /* ARPagingTablePageControl.m */; };
-		D77AE5041511F140007DB396 /* ARPagingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4FE1511F140007DB396 /* ARPagingTableView.m */; };
-		D77AE5051511F140007DB396 /* ARPagingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4FF1511F140007DB396 /* ARPagingTableViewController.m */; };
-		D77AE5171511F319007DB396 /* SimplePagingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE5151511F319007DB396 /* SimplePagingTableViewController.m */; };
+		D77AE5031511F140007DB396 /* ARTableViewPagerPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4FD1511F140007DB396 /* ARTableViewPagerPageControl.m */; };
+		D77AE5041511F140007DB396 /* ARTableViewPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4FE1511F140007DB396 /* ARTableViewPagerView.m */; };
+		D77AE5051511F140007DB396 /* ARTableViewPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4FF1511F140007DB396 /* ARTableViewPagerViewController.m */; };
+		D77AE5171511F319007DB396 /* SimpleTableViewPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE5151511F319007DB396 /* SimpleTableViewPagerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +30,14 @@
 		D77AE4EE1511F0E7007DB396 /* SimpleExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleExample-Prefix.pch"; sourceTree = "<group>"; };
 		D77AE4EF1511F0E7007DB396 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D77AE4F01511F0E7007DB396 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D77AE4FD1511F140007DB396 /* ARPagingTablePageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARPagingTablePageControl.m; path = ../../Classes/ARPagingTablePageControl.m; sourceTree = "<group>"; };
-		D77AE4FE1511F140007DB396 /* ARPagingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARPagingTableView.m; path = ../../Classes/ARPagingTableView.m; sourceTree = "<group>"; };
-		D77AE4FF1511F140007DB396 /* ARPagingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARPagingTableViewController.m; path = ../../Classes/ARPagingTableViewController.m; sourceTree = "<group>"; };
-		D77AE5001511F140007DB396 /* ARPagingTablePageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARPagingTablePageControl.h; path = ../../Classes/ARPagingTablePageControl.h; sourceTree = "<group>"; };
-		D77AE5011511F140007DB396 /* ARPagingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARPagingTableView.h; path = ../../Classes/ARPagingTableView.h; sourceTree = "<group>"; };
-		D77AE5021511F140007DB396 /* ARPagingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARPagingTableViewController.h; path = ../../Classes/ARPagingTableViewController.h; sourceTree = "<group>"; };
-		D77AE5141511F319007DB396 /* SimplePagingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePagingTableViewController.h; sourceTree = "<group>"; };
-		D77AE5151511F319007DB396 /* SimplePagingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePagingTableViewController.m; sourceTree = "<group>"; };
+		D77AE4FD1511F140007DB396 /* ARTableViewPagerPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARTableViewPagerPageControl.m; path = ../../Classes/ARTableViewPagerPageControl.m; sourceTree = "<group>"; };
+		D77AE4FE1511F140007DB396 /* ARTableViewPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARTableViewPagerView.m; path = ../../Classes/ARTableViewPagerView.m; sourceTree = "<group>"; };
+		D77AE4FF1511F140007DB396 /* ARTableViewPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARTableViewPagerViewController.m; path = ../../Classes/ARTableViewPagerViewController.m; sourceTree = "<group>"; };
+		D77AE5001511F140007DB396 /* ARTableViewPagerPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; name = ARTableViewPagerPageControl.h; path = ../../Classes/ARTableViewPagerPageControl.h; sourceTree = "<group>"; };
+		D77AE5011511F140007DB396 /* ARTableViewPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; name = ARTableViewPagerView.h; path = ../../Classes/ARTableViewPagerView.h; sourceTree = "<group>"; };
+		D77AE5021511F140007DB396 /* ARTableViewPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = ARTableViewPagerViewController.h; path = ../../Classes/ARTableViewPagerViewController.h; sourceTree = "<group>"; };
+		D77AE5141511F319007DB396 /* SimpleTableViewPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SimpleTableViewPagerViewController.h; sourceTree = "<group>"; };
+		D77AE5151511F319007DB396 /* SimpleTableViewPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewPagerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +87,8 @@
 			children = (
 				D77AE4EF1511F0E7007DB396 /* AppDelegate.h */,
 				D77AE4F01511F0E7007DB396 /* AppDelegate.m */,
-				D77AE5141511F319007DB396 /* SimplePagingTableViewController.h */,
-				D77AE5151511F319007DB396 /* SimplePagingTableViewController.m */,
+				D77AE5141511F319007DB396 /* SimpleTableViewPagerViewController.h */,
+				D77AE5151511F319007DB396 /* SimpleTableViewPagerViewController.m */,
 				D77AE4E71511F0E7007DB396 /* Supporting Files */,
 			);
 			path = SimpleExample;
@@ -108,12 +108,12 @@
 		D77AE4FC1511F128007DB396 /* ARTableViewPager */ = {
 			isa = PBXGroup;
 			children = (
-				D77AE4FD1511F140007DB396 /* ARPagingTablePageControl.m */,
-				D77AE4FE1511F140007DB396 /* ARPagingTableView.m */,
-				D77AE4FF1511F140007DB396 /* ARPagingTableViewController.m */,
-				D77AE5001511F140007DB396 /* ARPagingTablePageControl.h */,
-				D77AE5011511F140007DB396 /* ARPagingTableView.h */,
-				D77AE5021511F140007DB396 /* ARPagingTableViewController.h */,
+				D77AE4FD1511F140007DB396 /* ARTableViewPagerPageControl.m */,
+				D77AE4FE1511F140007DB396 /* ARTableViewPagerView.m */,
+				D77AE4FF1511F140007DB396 /* ARTableViewPagerViewController.m */,
+				D77AE5001511F140007DB396 /* ARTableViewPagerPageControl.h */,
+				D77AE5011511F140007DB396 /* ARTableViewPagerView.h */,
+				D77AE5021511F140007DB396 /* ARTableViewPagerViewController.h */,
 			);
 			name = ARTableViewPager;
 			sourceTree = "<group>";
@@ -181,10 +181,10 @@
 			files = (
 				D77AE4ED1511F0E7007DB396 /* main.m in Sources */,
 				D77AE4F11511F0E7007DB396 /* AppDelegate.m in Sources */,
-				D77AE5031511F140007DB396 /* ARPagingTablePageControl.m in Sources */,
-				D77AE5041511F140007DB396 /* ARPagingTableView.m in Sources */,
-				D77AE5051511F140007DB396 /* ARPagingTableViewController.m in Sources */,
-				D77AE5171511F319007DB396 /* SimplePagingTableViewController.m in Sources */,
+				D77AE5031511F140007DB396 /* ARTableViewPagerPageControl.m in Sources */,
+				D77AE5041511F140007DB396 /* ARTableViewPagerView.m in Sources */,
+				D77AE5051511F140007DB396 /* ARTableViewPagerViewController.m in Sources */,
+				D77AE5171511F319007DB396 /* SimpleTableViewPagerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

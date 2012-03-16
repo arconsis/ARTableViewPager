@@ -1,5 +1,5 @@
 /* 
- Copyright (c) 2012 arconsis IT-Solutions GmbH (http://www.arconsis.com)
+ Copyright (c) 2012 arconsis IT-Solutions GmbH (http://www.arconsis.com )
  
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
  associated documentation files (the "Software"), to deal in the Software without restriction, including
@@ -18,31 +18,37 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "ARPagingTableView.h"
+#import "ARTableViewPagerView.h"
 
-@interface ARPagingTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ARPagingTableViewChanged> 
+@interface ARTableViewPagerViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ARTableViewPagerViewChanged> 
 
-@property (strong, nonatomic, readonly) ARPagingTableView *pagingTableView;
+@property (strong, nonatomic, readonly) ARTableViewPagerView *pagingTableView;
 @property (nonatomic) NSUInteger numberOfPages;
+
+// use this property to adjust the frame of the tableViewPager if using it as a subview like in a NavigationController
 @property (nonatomic) CGRect frame;
 
+// controle the page control header
 @property (nonatomic, strong) UIColor *pageControlBackgroundColor;
 @property (nonatomic) BOOL hidePageControl;
 @property (nonatomic) float pageControlHeight;
 
+// set the background color auf the paging table
 @property (nonatomic, strong) UIColor *scrollingBackgroundColor;
-@property (nonatomic, strong) UIColor *fixedBackgroundColor;
+@property (nonatomic, strong) UIColor *fixedBackgroundColor; //overrides the scrollingBackgroundColor
 
-@property (nonatomic, strong) NSArray *titleViews;
+// set Views used in the page control
+@property (nonatomic, strong) NSArray *titleStrings; // using default views for the titles
+@property (nonatomic, strong) NSArray *titleViews; // overrides the stings from titleStrings
 @property (nonatomic, strong) UIView *leftArrowView;
 @property (nonatomic, strong) UIView *rightArrowView;
-@property (nonatomic, strong) NSArray *titleStrings;
 
 - (id)initWithNumberOfPages:(NSUInteger)numberOfPages;
-- (id)initWithNumberTitleViews:(NSArray *)titleViews;
+- (id)initWithTitleViews:(NSArray *)titleViews;
+- (id)initWithTitleStrings:(NSArray *)titleStrings;
 
-- (UITableView *)tableViewForPageIndex:(NSUInteger)pageIndex;
 - (NSArray *)tableviews;
+- (UITableView *)tableViewForPageIndex:(NSUInteger)pageIndex;
 - (NSUInteger) currentPageIndex;
 - (void)moveToPageAtIndex:(NSUInteger)pageIndex animated:(BOOL)animated;
 

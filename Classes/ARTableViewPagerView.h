@@ -1,5 +1,5 @@
 /* 
- Copyright (c) 2012 arconsis IT-Solutions GmbH (http://www.arconsis.com)
+ Copyright (c) 2012 arconsis IT-Solutions GmbH (http://www.arconsis.com )
  
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
  associated documentation files (the "Software"), to deal in the Software without restriction, including
@@ -18,20 +18,20 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "ARPagingTablePageControl.h"
+#import "ARTableViewPagerPageControl.h"
 
 #define PAGECONTROL_DEFAULT_HEIGHT 36
-@protocol ARPagingTableViewChanged <NSObject>
+@protocol ARTableViewPagerViewChanged <NSObject>
 
 - (void)pageChangedToTableView:(UITableView *)tableview withPageIndex:(NSUInteger)pageIndex;
 
 @end
 
-@interface ARPagingTableView : UIView <UIScrollViewDelegate>
+@interface ARTableViewPagerView : UIView <UIScrollViewDelegate>
 
-@property (nonatomic, unsafe_unretained) id <ARPagingTableViewChanged> delegate;
+@property (nonatomic, unsafe_unretained) id <ARTableViewPagerViewChanged> delegate;
 
-@property (nonatomic, strong, readonly) ARPagingTablePageControl *pageControl;
+@property (nonatomic, strong, readonly) ARTableViewPagerPageControl *pageControl;
 @property (nonatomic, strong, readonly) UIScrollView *scrollView;
 
 // specify the content of the pageControle
@@ -42,7 +42,7 @@
 
 @property (nonatomic, strong) UIColor *pageControlBackgroundColor;
 @property (nonatomic, strong) UIColor *scrollingBackgroundColor;
-@property (nonatomic, strong) UIColor *fixedBackgroundColor;
+@property (nonatomic, strong) UIColor *fixedBackgroundColor; // overrides scrollingBackgroundColor
 @property (nonatomic, strong) UIColor *titleDefaultLabelColor;
 @property (nonatomic, strong) UIColor *arrowDefaultColor;
 

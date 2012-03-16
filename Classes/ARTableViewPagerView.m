@@ -1,5 +1,5 @@
 /* 
- Copyright (c) 2012 arconsis IT-Solutions GmbH (http://www.arconsis.com)
+ Copyright (c) 2012 arconsis IT-Solutions GmbH (http://www.arconsis.com )
  
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
  associated documentation files (the "Software"), to deal in the Software without restriction, including
@@ -17,25 +17,24 @@
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import "ARPagingTableView.h"
+#import "ARTableViewPagerView.h"
 
-@interface ARPagingTableView ()
+@interface ARTableViewPagerView ()
 
-@property (nonatomic, strong) ARPagingTablePageControl *pageControl;
+@property (nonatomic, strong) ARTableViewPagerPageControl *pageControl;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic) CGRect viewRect;
-
 
 @property (nonatomic) BOOL pageControlBeingUsed;
 @property (nonatomic) CGFloat lastContentOffsetX;
 @property (nonatomic) CGFloat lastContentOffsetY;
 
--(void)pageChangedToTableView:(UITableView *)tableview withPageIndex:(NSUInteger)pageIndex;
+- (void)pageChangedToTableView:(UITableView *)tableview withPageIndex:(NSUInteger)pageIndex;
 - (void)setupTitleViewsForPageIndex:(NSUInteger)pageIndex;
 - (void)setupDefaultTitleViews;
 @end
 
-@implementation ARPagingTableView
+@implementation ARTableViewPagerView
 @synthesize delegate = _delegate;
 @synthesize pageControl = _pageControl;
 @synthesize hidePageControl = _hidePageControl;
@@ -53,7 +52,6 @@
 @synthesize titleDefaultLabelColor = _titleDefaultLabelColor;
 @synthesize titleDefaultLabelStrings = _titleDefaultLabelStrings;
 
-
 @synthesize viewRect = _viewRect;
 @synthesize lastContentOffsetX = _lastContentOffsetX;
 @synthesize lastContentOffsetY = _lastContentOffsetY;
@@ -70,7 +68,7 @@
         usedPageControlHeight = 0;
     }
     
-    self.pageControl = [[ARPagingTablePageControl alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, usedPageControlHeight)];
+    self.pageControl = [[ARTableViewPagerPageControl alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, usedPageControlHeight)];
     self.pageControl.showTitles = (self.titleViews == nil || [self.titleViews count] == 0) && (self.titleDefaultLabelStrings == nil || [self.titleDefaultLabelStrings count] == 0) ? NO : YES;
     if (self.pageControlBackgroundColor) {
         self.pageControl.backgroundColor = self.pageControlBackgroundColor;
@@ -181,7 +179,6 @@
     [self pageControlChangePage:YES];
 }
 
-
 - (void) pageControlChangePage:(BOOL)animated {
 	// Update the scroll view to the appropriate page
 	CGRect frame;
@@ -221,6 +218,7 @@
         [self.pageControl.leftView addSubview:l];
         l.frame = self.pageControl.leftView.bounds;
     }
+    
     if (self.titleViews && pageIndex < self.pageControl.numberOfPages - 1) {
 
         UIView *r = self.rightArrowView ? self.rightArrowView : [self defaultArrowView:@"> "];        
@@ -236,10 +234,8 @@
 -(void)pageChangedToTableView:(UITableView *)tableview withPageIndex:(NSUInteger)pageIndex {
     
     [self setupTitleViewsForPageIndex:pageIndex];
-    
     [self.delegate pageChangedToTableView:tableview withPageIndex:pageIndex];
 }
-
 
 - (void)setupDefaultTitleViews {
     self.titleViews = [NSMutableArray arrayWithCapacity:[self.titleDefaultLabelStrings count]];
