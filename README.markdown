@@ -98,6 +98,12 @@ Gives you the page index of the current displayed page.
 ####moveToPageAtIndex:animated
 Changes the displayed page to the given page index. If animated is YES the change is animated with a swipe.
 
+
+Note:
+You have to implement the delegate method
+- (NSInteger)pageIndex:(NSUInteger)pageIndex numberOfSectionsInTableView:(UITableView *)tableView
+in order to get it to work.
+
 Licence
 ----------
  Copyright (c) 2012 arconsis IT-Solutions GmbH (http://www.arconsis.com )
