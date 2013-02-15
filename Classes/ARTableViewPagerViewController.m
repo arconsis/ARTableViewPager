@@ -194,7 +194,7 @@
 // optionals 
 - (NSInteger)pageIndex:(NSUInteger)pageIndex numberOfSectionsInTableView:(UITableView *)tableView{
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSString *)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
