@@ -70,9 +70,6 @@ The total page count.
 
 ####tableViewPagerView
 The view conturing the the paging control and the pageControl header.
-	
-####frame
-The size of the View. Set this if you using  the ARTablePagerView as a subview.
 
 Methods
 -------

@@ -23,11 +23,8 @@
 
 @property (nonatomic, strong) ARTableViewPagerPageControl *pageControl;
 @property (nonatomic, strong) UIScrollView *scrollView;
-@property (nonatomic) CGRect viewRect;
 
 @property (nonatomic) BOOL pageControlBeingUsed;
-@property (nonatomic) CGFloat lastContentOffsetX;
-@property (nonatomic) CGFloat lastContentOffsetY;
 
 - (void)pageChangedToTableView:(UITableView *)tableview withPageIndex:(NSUInteger)pageIndex;
 - (void)setupTitleViewsForPageIndex:(NSUInteger)pageIndex;
@@ -52,9 +49,6 @@
 @synthesize titleDefaultLabelColor = _titleDefaultLabelColor;
 @synthesize titleDefaultLabelStrings = _titleDefaultLabelStrings;
 
-@synthesize viewRect = _viewRect;
-@synthesize lastContentOffsetX = _lastContentOffsetX;
-@synthesize lastContentOffsetY = _lastContentOffsetY;
 @synthesize pageControlBeingUsed = _pageControlBeingUsed;
 
 - (void)initializeLayout {
@@ -87,10 +81,10 @@
     self.scrollView.alwaysBounceVertical = NO;
     self.scrollView.backgroundColor = self.scrollingBackgroundColor ? self.scrollingBackgroundColor : [UIColor clearColor];
     self.scrollView.delegate = self;
+    self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self addSubview:self.scrollView];
-    
-    self.viewRect = self.frame;
-    
+
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.scrollView.directionalLockEnabled = YES;
     self.pageControlBeingUsed = NO;
     
@@ -113,36 +107,9 @@
     return self;
 }
 
-- (void)layoutSubviews {    
-    self.frame = self.viewRect;
-}
-
 #pragma mark - Handle scrolling
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
-    
-    if (self.lastContentOffsetX > self.scrollView.contentOffset.x) {
-        // scrollDirection = RIGHT;
-        self.scrollView.scrollEnabled = YES;
-    } else if (self.lastContentOffsetX < self.scrollView.contentOffset.x) {
-        // scrollDirection = LEFT;
-        self.scrollView.scrollEnabled = YES;
-    }
-    
-    if (self.lastContentOffsetY > self.scrollView.contentOffset.y) {
-        // scrollDirection = DOWN;
-        self.scrollView.scrollEnabled = NO;
-    } else if (self.lastContentOffsetY < self.scrollView.contentOffset.y) {
-        // scrollDirection = UP;
-        self.scrollView.scrollEnabled = NO;
-    } else {
-        // scrollDirection = CRAZY;
-        self.scrollView.scrollEnabled = YES;
-    }
-    
-    self.lastContentOffsetX = self.scrollView.contentOffset.x;
-    self.lastContentOffsetY = self.scrollView.contentOffset.y;
-    
     if (!self.pageControlBeingUsed) {
 		// Switch the indicator when more than 50% of the previous/next page is visible
 		CGFloat pageWidth = self.scrollView.frame.size.width;

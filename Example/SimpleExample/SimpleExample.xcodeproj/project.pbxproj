@@ -17,6 +17,7 @@
 		D77AE5041511F140007DB396 /* ARTableViewPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4FE1511F140007DB396 /* ARTableViewPagerView.m */; };
 		D77AE5051511F140007DB396 /* ARTableViewPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE4FF1511F140007DB396 /* ARTableViewPagerViewController.m */; };
 		D77AE5171511F319007DB396 /* SimpleTableViewPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77AE5151511F319007DB396 /* SimpleTableViewPagerViewController.m */; };
+		D7D2E79F16CE579C00D0B682 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D2E79E16CE579C00D0B682 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +34,12 @@
 		D77AE4FD1511F140007DB396 /* ARTableViewPagerPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARTableViewPagerPageControl.m; path = ../../Classes/ARTableViewPagerPageControl.m; sourceTree = "<group>"; };
 		D77AE4FE1511F140007DB396 /* ARTableViewPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARTableViewPagerView.m; path = ../../Classes/ARTableViewPagerView.m; sourceTree = "<group>"; };
 		D77AE4FF1511F140007DB396 /* ARTableViewPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARTableViewPagerViewController.m; path = ../../Classes/ARTableViewPagerViewController.m; sourceTree = "<group>"; };
-		D77AE5001511F140007DB396 /* ARTableViewPagerPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; name = ARTableViewPagerPageControl.h; path = ../../Classes/ARTableViewPagerPageControl.h; sourceTree = "<group>"; };
-		D77AE5011511F140007DB396 /* ARTableViewPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; name = ARTableViewPagerView.h; path = ../../Classes/ARTableViewPagerView.h; sourceTree = "<group>"; };
-		D77AE5021511F140007DB396 /* ARTableViewPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = ARTableViewPagerViewController.h; path = ../../Classes/ARTableViewPagerViewController.h; sourceTree = "<group>"; };
-		D77AE5141511F319007DB396 /* SimpleTableViewPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SimpleTableViewPagerViewController.h; sourceTree = "<group>"; };
+		D77AE5001511F140007DB396 /* ARTableViewPagerPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARTableViewPagerPageControl.h; path = ../../Classes/ARTableViewPagerPageControl.h; sourceTree = "<group>"; };
+		D77AE5011511F140007DB396 /* ARTableViewPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARTableViewPagerView.h; path = ../../Classes/ARTableViewPagerView.h; sourceTree = "<group>"; };
+		D77AE5021511F140007DB396 /* ARTableViewPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARTableViewPagerViewController.h; path = ../../Classes/ARTableViewPagerViewController.h; sourceTree = "<group>"; };
+		D77AE5141511F319007DB396 /* SimpleTableViewPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewPagerViewController.h; sourceTree = "<group>"; };
 		D77AE5151511F319007DB396 /* SimpleTableViewPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewPagerViewController.m; sourceTree = "<group>"; };
+		D7D2E79E16CE579C00D0B682 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		D77AE4D11511F0E7007DB396 = {
 			isa = PBXGroup;
 			children = (
+				D7D2E79E16CE579C00D0B682 /* Default-568h@2x.png */,
 				D77AE4FC1511F128007DB396 /* ARTableViewPager */,
 				D77AE4E61511F0E7007DB396 /* SimpleExample */,
 				D77AE4DF1511F0E7007DB396 /* Frameworks */,
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77AE4EB1511F0E7007DB396 /* InfoPlist.strings in Resources */,
+				D7D2E79F16CE579C00D0B682 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

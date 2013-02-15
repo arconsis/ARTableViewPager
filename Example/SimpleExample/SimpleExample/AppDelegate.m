@@ -34,13 +34,10 @@
     simplePTVC.title = @"Simple Pager";
     simplePTVC.titleStrings = [NSArray arrayWithObjects:@"Page 0", @"Page 1", @"Page 2", nil];
     simplePTVC.pageControlBackgroundColor = [UIColor lightGrayColor];
-    
-    // if you use the ARTableViewPager in another view then window you have to set its frame. In this case we have to adjust the height because of the navigation bar of the NavigationContoller.
-    simplePTVC.frame = CGRectMake(0, 0, 320, 416);
-    
+
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:simplePTVC];
     
-    [self.window addSubview:self.navigationController.view];
+    self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     
     return YES;

@@ -132,7 +132,7 @@
 @property (strong, nonatomic, readonly) ARTableViewPagerView *tableViewPagerView;
 @property (nonatomic, readonly) NSUInteger numberOfPages;
 
-// use this property to adjust the frame of the tableViewPager if using it as a subview like in a NavigationController
+// this property is deprecated and will not be used anymore
 @property (nonatomic) CGRect frame;
 
 // controle the page control header

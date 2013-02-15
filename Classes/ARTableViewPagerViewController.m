@@ -33,7 +33,6 @@
 @synthesize tableViewPagerView = _tableViewPagerView;
 @synthesize numberOfPages = _numberOfPages;
 @synthesize internalTableViews = _internalTableViews;
-@synthesize frame = _frame;
 
 @synthesize titleViews = _titleViews;
 @synthesize leftArrowView = _leftArrowView;
@@ -75,8 +74,6 @@
     if (self = [super init]) {
         self.numberOfPages = numberOfPages;
         self.internalTableViews = [NSMutableArray arrayWithCapacity:numberOfPages];
-    
-        self.frame = CGRectMake(0, 20, 320, 460);
     }
     return self;
     
@@ -92,13 +89,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    if ([self.view isKindOfClass:[ARTableViewPagerView class]]) {
-        self.tableViewPagerView = (ARTableViewPagerView *)self.view;
-    } else {
+    if (![self.view isKindOfClass:[ARTableViewPagerView class]]) {
         NSLog(@"Configuration Warning: View for PagingTableViewController must be of type PagingTableView! Setting default view.");
         self.view = [[ARTableViewPagerView alloc] initWithFrame:self.view.bounds];
-        
     }
+
+    self.tableViewPagerView = (ARTableViewPagerView *)self.view;
     
     // Need to init the pagingTableView first with size and labels
     self.tableViewPagerView.titleViews = [self.titleViews mutableCopy];
@@ -111,7 +107,6 @@
     self.tableViewPagerView.hidePageControl = self.hidePageControl ? self.hidePageControl : NO;
     self.tableViewPagerView.pageControlHeight = self.pageControlHeight;
     
-    self.tableViewPagerView = [self.tableViewPagerView initWithFrame:self.frame];
     self.tableViewPagerView.delegate = self;
 
     [self.tableViewPagerView initializeLayout];
@@ -129,6 +124,7 @@
 		UITableView *subview = [[UITableView alloc] initWithFrame:frame];
         subview.dataSource = self;
         subview.delegate = self;
+        subview.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         
 		[scrollView addSubview:subview];
         [self.internalTableViews insertObject:subview atIndex:i];
@@ -138,6 +134,12 @@
     
     pageControl.currentPage = 0;
 	pageControl.numberOfPages = self.numberOfPages;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.tableViewPagerView.scrollView.contentSize = CGSizeMake(self.tableViewPagerView.scrollView.frame.size.width * self.numberOfPages, self.tableViewPagerView.scrollView.frame.size.height);
+
 }
 
 - (void)didReceiveMemoryWarning {
