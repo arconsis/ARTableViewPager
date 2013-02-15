@@ -34,9 +34,9 @@
 @optional
 - (NSInteger)pageIndex:(NSUInteger)pageIndex numberOfSectionsInTableView:(UITableView *)tableView;
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;    // fixed font style. use custom view (UILabel) if you want something different
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section;
 
+- (NSString *)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;
+- (NSString *)pageIndex:(NSUInteger)pageIndex tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section;
 
 // Editing
 
