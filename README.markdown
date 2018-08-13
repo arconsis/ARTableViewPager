@@ -32,7 +32,7 @@ How to use
 
 3. _optional:_ Configure the instance using the build in properties
 
-4. Add it to the the screen.
+4. Add it to the screen.
  	_Note: If you use the ARTableViewPager with a UINavigationController you have to adjust the frame first by setting the frame property of the view controller like in the Simple Example._
 
 Properties
@@ -69,7 +69,7 @@ The background color behind the table views. It overlays the `fixedBackgroundCol
 The total page count.
 
 ####tableViewPagerView
-The view conturing the the paging control and the pageControl header.
+The view conturing the paging control and the pageControl header.
 
 Methods
 -------
